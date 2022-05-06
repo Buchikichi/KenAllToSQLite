@@ -1,0 +1,17 @@
+# -Dspring.profiles.active=dev
+spring:
+  main:
+    banner-mode: "off"
+  datasource:
+    driverClassName: org.sqlite.JDBC
+    url: jdbc:sqlite:./address.db
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+#    show-sql: true
+#
+loader:
+  charsetName: MS932
